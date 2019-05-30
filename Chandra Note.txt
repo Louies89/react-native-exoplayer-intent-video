@@ -1,0 +1,30 @@
+Add below lines in clenet AndroidManifest.xml in 
+
+      <activity 
+        android:name="com.herudi.exovideo.PlayerActivity"
+        android:configChanges="orientation|screenSize"
+        android:screenOrientation="unspecified"> 
+      </activity>
+			
+			
+like below example
+
+  <application
+      android:name=".MainApplication"
+      android:allowBackup="true"
+      android:label="@string/app_name"
+      android:icon="@mipmap/ic_launcher"
+      android:theme="@style/AppTheme">
+      
+      ...
+      
+      <!-- Add this code-->
+      <activity 
+        android:name="com.herudi.exovideo.PlayerActivity"
+        android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"   <!-- Video starts from same place when when orientation changes -->
+        android:screenOrientation="unspecified">         <!-- This takes care of orientation change and auto orientation of video play-->
+      </activity> 
+      
+      ...
+      
+    </application>
